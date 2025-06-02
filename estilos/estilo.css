@@ -314,32 +314,22 @@ p {
 
 /* --- Media Queries para Responsiv --- */
 
-/* Estilos para pantallas chicas */
-@media (max-width: 767px) {
-
-    /* 1. Ajustes para el Menú de Navegación */
-    .menu a {
-        display: block; /* Para que cada enlace ocupe una línea */
-        margin: 10px auto; /* Centrado y con espacio vertical */
-        font-size: 1.3em;
+    .pagina-bebidas,
+    .pagina-comidas,
+    .pagina-extras,
+    .pagina-helados,
+    .pagina-cositasparallevar {
+        padding: 20px 10px 40px; /* Reducir el padding general en celulares */
+                                 /* (ej: 20px arriba, 10px a los lados, 40px abajo) */
     }
 
-    /* 2. Ajustes para las Tarjetas de Producto */
-    .producto, .contenedor-imagen {
-        width: 90%; /* Que ocupe casi todo el ancho disponible */
+    .pagina-bebidas h1,
+    .pagina-comidas h1,
+    .pagina-extras h1,
+    .pagina-helados h1,
+    .pagina-cositasparallevar h1 {
+        font-size: 2.2em; /* Reducir el tamaño de los títulos H1 en móviles */
     }
-
-    
-    .card-personal {
-        flex-basis: calc(50% - 10px); /* 2 tarjetas por fila */
-        /* O puedo poner para que se vea 1 para pantallas mas chicas */
-        /* flex-basis: 100%; */
-        /* max-height: inicial; o un valor diferente si es necesario */
-    }
-    .personal h2 {
-        font-size: 1.8rem; /* Un poco más chico para celulares */
-    }
-
 
     /* Otros ajustes generales para celulares */
     .logo-container h1 {
@@ -354,7 +344,4 @@ p {
     .nosotros { /* Título de "Encontranos" */
         font-size: 2em;
     }
-
-}
-
-
+ /* Fin del @media (max-width: 767px) */
