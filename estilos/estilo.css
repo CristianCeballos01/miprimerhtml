@@ -312,15 +312,38 @@ p {
   }
 }
 
-/* --- Media Queries para Responsiv --- */
+/* --- Media Queries para Responsividad --- */
 
+/* Estilos para pantallas chicas (hasta 767px de ancho) */
+@media (max-width: 767px) {
+
+    /* Ajustes para el Menú de Navegación */
+    .menu a {
+        display: block; 
+        margin: 10px auto; 
+        font-size: 1.3em;
+    }
+
+    /* Ajustes para las Tarjetas de Producto */
+    .producto, .contenedor-imagen {
+        width: 90%; 
+    }
+    
+    /* Ajustes para las Tarjetas de Personal */
+    .card-personal {
+        flex-basis: calc(50% - 10px); 
+    }
+    .personal h2 {
+        font-size: 1.8rem; 
+    }
+
+    /* Ajustes para las páginas de categorías en celulares */
     .pagina-bebidas,
     .pagina-comidas,
     .pagina-extras,
     .pagina-helados,
     .pagina-cositasparallevar {
-        padding: 20px 10px 40px; /* Reducir el padding general en celulares */
-                                 /* (ej: 20px arriba, 10px a los lados, 40px abajo) */
+        padding: 20px 10px 40px; 
     }
 
     .pagina-bebidas h1,
@@ -328,20 +351,21 @@ p {
     .pagina-extras h1,
     .pagina-helados h1,
     .pagina-cositasparallevar h1 {
-        font-size: 2.2em; /* Reducir el tamaño de los títulos H1 en móviles */
+        font-size: 2.2em; 
     }
 
-    /* Otros ajustes generales para celulares */
-    .logo-container h1 {
-        font-size: 2em; /* Reducir tamaño del logo */
+    /* ajustes generales para celulares */
+    .logo-container h1 { 
+        font-size: 2em; 
         letter-spacing: 2px;
     }
 
-    h2 { /* Encabezados generales */
+    h2 { /* Encabezados generales h2 en celulares */
         font-size: 1.9em;
     }
 
-    .nosotros { /* Título de "Encontranos" */
+    .nosotros { /* Título de "Encontranos" en celulares */
         font-size: 2em;
     }
- /* Fin del @media (max-width: 767px) */
+
+} /* <-- fin del bloque @media */
