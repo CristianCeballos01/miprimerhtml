@@ -1,0 +1,360 @@
+/* --- Reset y Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Importar fuentes de Google Fonts para un estilo más "rebelde" */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
+/* 'Oswald' para títulos grandes (bold, uppercase) */
+
+ body {
+background-color: #000000;
+font-family: 'Roboto Mono', monospace;
+color: #F8F5EC;
+line-height: 1.6;
+min-height: 100vh;
+
+display: grid;
+grid-template-rows: auto 1fr auto; /* "NUEVO" Define 3 filas: header, main (contenido que crece), footer */
+grid-template-columns: 100%; /* "NUEVO" Define 1 columna para todo el ancho */
+    /* La propiedad flex-direction: column; ya no es necesaria porque Grid maneja las filas */
+}
+
+/* --- Encabezados Generales --- */
+
+
+h2 {
+    /* Color para subtítulos: un blanco ahumado */
+    color: #F8F5EC;
+    text-align: center;
+    margin-top: 20px; /* Más espacio arriba */
+    margin-bottom: 35px; /* Más espacio abajo */
+    font-size: 2.2em; /* Un poco más grande */
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; /* También en mayúsculas */
+}
+
+/* --- Párrafos --- */
+p {
+    color: #F8F5EC;
+    margin: 10px 0;
+    font-size: 1.1em; /* Ligeramente más grande */
+}
+
+/* --- Clases específicas de textos --- */
+.nosotros {
+    text-align: center;
+    color: #5609bb;
+    margin-top: 50px; /* Más espacio arriba */
+    font-size: 2.5em; /* Un poco más grande para destacar */
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.calle {
+    text-align: center;
+    margin-bottom: 50px; /* Más espacio abajo */
+    font-size: 1.2em; /* Ligeramente más grande */
+    color: #F8F5EC; /* Aseguramos que sea el color del texto principal */
+}
+
+
+/* --- Menú de Navegación --- */
+.menu {
+    text-align: center;
+    margin: 40px 0; /* Más espacio vertical */
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 0; /* Padding interno */
+    border-radius: 8px;
+}
+
+.menu a {
+    display: inline-block;
+    margin: 0 25px; /* Más espaciado entre elementos del menú */
+    text-decoration: none;
+    font-weight: bold;
+    color: #F8F5EC; 
+    font-size: 1.2em; /* Un poco más grande */
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase; /* Mayúsculas para el menú */
+    letter-spacing: 0.8px;
+}
+
+.menu a:hover {
+    color: #CD5C5C;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* --- Contenedor Principal para Productos con Flexbox --- */
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Más espacio entre productos */
+    padding-bottom: 60px; /* Más padding inferior */
+}
+
+/* --- Cada producto individual --- */
+.producto, .contenedor-imagen {
+    /* Fondo para los productos: un gris muy oscuro, casi negro, con transparencia */
+    background-color: rgba(30, 30, 30, 0.8); /* Gris oscuro semitransparente */
+    border-radius: 12px; /* Un poco más redondeado */
+    border: 2px solid #555; /* Borde gris oscuro */
+    width: 320px; /* Un poco más anchos */
+    text-align: center;
+    padding: 15px; /* Más padding interno */
+    color: #F8F5EC;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.producto:hover, .contenedor-imagen:hover {
+    transform: scale(1.04); /* Un poco más de escala */
+    border-color: #CD5C5C; /* El rojo óxido oscuro al cuando le paso el mouse por arriba */
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5); /* Sombra más intensa al hover */
+}
+
+/* --- Imagen dentro de productos --- */
+.producto img, .contenedor-imagen img {
+    width: 100%;
+    height: 250px; /* Un poco más altas las imágenes */
+    object-fit: cover;
+    border-radius: 10px; /* Un poco más redondeado */
+    margin-bottom: 15px; /* Más espacio debajo de la imagen */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Nombre del producto --- */
+.producto-nombre,
+.contenedor-imagen p:not(.precio) {
+    font-size: 1.3em; /* Un poco más grande */
+    font-weight: 700; /* Más negrita */
+    margin-bottom: 8px;
+    color: #E2B48C; /* Tono caramelo para los nombres de los productos */
+    text-transform: uppercase; /* Nombres en mayúsculas */
+}
+
+/* --- Precio --- */
+.precio {
+    font-size: 1.2em; /* Un poco más grande */
+    color: #5CB85C; /* Un verde oscuro */
+    /* #7FFF00; verde neón, lo guardo porque esta god */
+    font-weight: bold;
+    margin: 5px 0 0;
+    letter-spacing: 0.5px;
+}
+
+/* --- Estilos específicos para páginas de categorías --- */
+/* fondo más oscuro, casi negro, para diferenciarse */
+.pagina-bebidas,
+.pagina-comidas,
+.pagina-extras,
+.pagina-helados,
+.pagina-cositasparallevar {
+    background-color: rgb(25, 25, 25); /* Un negro muy oscuro */
+    padding: 30px 15px 60px; /* Más padding general */
+    min-height: 100vh;
+    flex-grow: 1; /* Para que la página se estire y ocupe el espacio */
+}
+
+/* Títulos en páginas de categorías */
+.pagina-bebidas h1,
+.pagina-comidas h1,
+.pagina-extras h1,
+.pagina-helados h1,
+.pagina-cositasparallevar h1 {
+    color: #CD5C5C; /* Mismo rojo óxido oscuro para los títulos de categoría */
+    margin-bottom: 15px;
+    font-size: 3em; /* Un poco más pequeño que el h1 principal, pero aún grande */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+.personal {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #535151;
+}
+
+.personal h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.galeria-personal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card-personal {
+  flex: 1 1 calc(25% - 15px);
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.card-personal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card-personal:hover img {
+  transform: scale(1.1);
+}
+
+.card-personal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-personal:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1.4rem;
+  margin: 5px 0;
+}
+
+.overlay p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+
+
+
+.footer {
+    background-color: #3e2723; /* Marrón oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.contacto {
+    background-color: rgba(255, 255, 255, 0.05); /* Un fondo suave */
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.contacto h2 {
+    color: #E2B48C; /* Color caramelo */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.contacto a {
+    color: #F8F5EC;
+    text-decoration: underline;
+}
+
+.logo-container {
+    text-align: center; /* <- Esto centra cualquier contenido dentro del contenedor */
+}
+
+.logo-container h1 {
+    font-size: 2.8em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #E2B48C;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    animation: aparecer 1s ease-in-out;
+}
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Media Queries para Responsiv --- */
+
+/* Estilos para pantallas chicas */
+@media (max-width: 767px) {
+
+    /* 1. Ajustes para el Menú de Navegación */
+    .menu a {
+        display: block; /* Para que cada enlace ocupe una línea */
+        margin: 10px auto; /* Centrado y con espacio vertical */
+        font-size: 1.3em;
+    }
+
+    /* 2. Ajustes para las Tarjetas de Producto */
+    .producto, .contenedor-imagen {
+        width: 90%; /* Que ocupe casi todo el ancho disponible */
+    }
+
+    
+    .card-personal {
+        flex-basis: calc(50% - 10px); /* 2 tarjetas por fila */
+        /* O puedo poner para que se vea 1 para pantallas mas chicas */
+        /* flex-basis: 100%; */
+        /* max-height: inicial; o un valor diferente si es necesario */
+    }
+    .personal h2 {
+        font-size: 1.8rem; /* Un poco más chico para celulares */
+    }
+
+
+    /* Otros ajustes generales para celulares */
+    .logo-container h1 {
+        font-size: 2em; /* Reducir tamaño del logo */
+        letter-spacing: 2px;
+    }
+
+    h2 { /* Encabezados generales */
+        font-size: 1.9em;
+    }
+
+    .nosotros { /* Título de "Encontranos" */
+        font-size: 2em;
+    }
+
+}
+
+
