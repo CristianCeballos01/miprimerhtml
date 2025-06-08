@@ -312,6 +312,10 @@ p {
   }
 }
 
+main {
+    grid-row: 2; /* Indica que <main> debe ocupar la segunda fila definida en el grid del body */
+}
+
 /* --- Media Queries para Responsividad --- */
 
 /* Estilos para pantallas chicas (hasta 767px de ancho) */
