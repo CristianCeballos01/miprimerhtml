@@ -149,28 +149,19 @@ p {
     letter-spacing: 0.5px;
 }
 
-/* --- Estilos específicos para páginas de categorías --- */
-/* fondo más oscuro, casi negro, para diferenciarse */
-.pagina-bebidas,
-.pagina-comidas,
-.pagina-extras,
-.pagina-helados,
-.pagina-cositasparallevar {
-    background-color: rgb(25, 25, 25); /* Un negro muy oscuro */
+/* --- Estilos comunes para todas las páginas de categorías --- */
+.pagina-categoria { /* Esta es la nueva clase */
+    background-color: rgb(25, 25, 25); /* Un negro muy africano */
     padding: 30px 15px 60px; /* Más padding general */
     min-height: 100vh;
     flex-grow: 1; /* Para que la página se estire y ocupe el espacio */
 }
 
-/* Títulos en páginas de categorías */
-.pagina-bebidas h1,
-.pagina-comidas h1,
-.pagina-extras h1,
-.pagina-helados h1,
-.pagina-cositasparallevar h1 {
+/* --- Títulos comunes en páginas de categorías --- */
+.pagina-categoria h1 { /* aca aplicamos los estilos comunes para todos los h1 de categoría */
     color: #CD5C5C; /* Mismo rojo óxido oscuro para los títulos de categoría */
     margin-bottom: 15px;
-    font-size: 3em; /* Un poco más pequeño que el h1 principal, pero aún grande */
+    font-size: 3em;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
