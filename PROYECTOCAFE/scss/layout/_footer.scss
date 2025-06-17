@@ -1,0 +1,10 @@
+// scss/layout/_footer.scss
+
+.footer {
+    background-color: $color-marron-oscuro-footer; // Usamos variable
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: $margin-top-footer; // Usamos variable
+}

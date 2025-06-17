@@ -1,0 +1,26 @@
+// scss/components/_menu.scss
+
+.menu {
+    text-align: center;
+    margin: $margin-vertical-menu 0; // Usamos variable
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: $padding-vertical-menu 0; // Usamos variable
+    border-radius: $border-radius-general; // Usamos variable
+
+    a {
+        display: inline-block;
+        margin: 0 $margin-horizontal-menu; // Usamos variable
+        text-decoration: none;
+        font-weight: bold;
+        color: $color-blanco-ahumado; // Usamos variable
+        font-size: $font-size-menu-desktop; // Usamos variable
+        transition: $transition-color, $transition-transform; // Usamos variables de transición
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+
+        &:hover {
+            color: $color-rojo-oxido; // Usamos variable
+            transform: translateY(-2px);
+        }
+    }
+}

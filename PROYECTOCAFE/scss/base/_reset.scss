@@ -1,0 +1,9 @@
+// scss/base/_reset.scss
+
+// --- Reset Básico ---
+// Resetea márgenes y paddings por defecto y establece box-sizing a border-box
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,20 @@
+// scss/utils/_mixins.scss
+
+// Mixin para estilos hover de tarjetas (productos, personal, etc.)
+@mixin tarjeta-hover {
+    transition: $transition-producto-hover; // Usamos la variable de transición
+    box-shadow: $box-shadow-producto; // Sombra normal
+
+    &:hover {
+        transform: scale(1.04);
+        border-color: $color-rojo-oxido; // Usamos la variable de color
+        box-shadow: $box-shadow-producto-hover; // Sombra al hover
+        cursor: pointer;
+    }
+}
+
+// @mixin centrar-flex {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }

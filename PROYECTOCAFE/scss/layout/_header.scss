@@ -1,0 +1,19 @@
+// scss/layout/_header.scss
+
+.header {
+    .logo-container {
+        text-align: center;
+
+        h1 {
+            font-size: $font-size-h1-desktop; // Usamos variable
+            margin-top: $margin-top-logo-h1; // Usamos variable
+            margin-bottom: $margin-bottom-logo-h1; // Usamos variable
+            font-family: $fuente-logo; // Usamos variable
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: $color-caramelo; // Usamos variable
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+            animation: aparecer 1s ease-in-out;
+        }
+    }
+}

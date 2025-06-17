@@ -1,0 +1,58 @@
+// scss/mq/_mediaqueries.scss
+
+// Media Queries para Responsividad
+
+// Estilos para pantallas chicas (hasta 767px de ancho)
+@media (max-width: $breakpoint-mobile) { // Usamos variable para el breakpoint
+
+    // Ajustes para el Menú de Navegación
+    .menu a {
+        display: block;
+        margin: 10px auto; // Podría ser variable
+        font-size: 1.3em; // Podría ser variable
+    }
+
+    // Ajustes para las Tarjetas de Producto
+    .producto, .contenedor-imagen {
+        width: 90%;
+    }
+
+    // Ajustes para las Tarjetas de Personal
+    .card-personal {
+        flex-basis: calc(50% - 10px); // Restando el gap
+    }
+    .personal h2 {
+        font-size: 1.8rem; // Mantengo rem
+    }
+
+    // Ajustes para las páginas de categorías en celulares
+    .pagina-bebidas,
+    .pagina-comidas,
+    .pagina-extras,
+    .pagina-helados,
+    .pagina-cositasparallevar {
+        padding: 20px 10px 40px; // Podrían ser variables
+    }
+
+    .pagina-bebidas h1,
+    .pagina-comidas h1,
+    .pagina-extras h1,
+    .pagina-helados h1,
+    .pagina-cositasparallevar h1 {
+        font-size: 2.2em; // Podría ser variable
+    }
+
+    // ajustes generales para celulares
+    .logo-container h1 {
+        font-size: 2em; // Podría ser variable
+        letter-spacing: 2px; // Podría ser variable
+    }
+
+    h2 { // Encabezados generales h2 en celulares
+        font-size: 1.9em; // Podría ser variable
+    }
+
+    .nosotros { // Título de "Encontranos" en celulares
+        font-size: 2em; // Podría ser variable
+    }
+}

@@ -1,0 +1,79 @@
+// scss/utils/_variables.scss
+
+// --- Colores ---
+$color-negro: #000000;
+$color-blanco-ahumado: #F8F5EC; // Blanco principal del texto y elementos
+$color-gris-oscuro-transparente: rgba(30, 30, 30, 0.8);
+$color-gris-claro-borde: #555;
+$color-rojo-oxido: #CD5C5C; // Color principal de hover y títulos de categoría
+$color-caramelo: #E2B48C; // Color para nombres de productos y títulos de contacto
+$color-verde-oscuro: #5CB85C; // Color para precios
+$color-morado: #5609bb; // Para "Nosotros"
+$color-fondo-personal: #535151;
+$color-marron-oscuro-footer: #3e2723;
+$color-fondo-contacto-suave: rgba(255, 255, 255, 0.05);
+
+// --- Fuentes ---
+$fuente-principal: "Roboto Mono", monospace;
+$fuente-titulos: "Oswald", sans-serif;
+$fuente-logo: "Bebas Neue", sans-serif;
+$fuente-personal-overlay: "Playfair Display", serif;
+
+// --- Tamaños de fuente ---
+$font-size-base: 1.1em;
+$font-size-h1-desktop: 2.8em;
+$font-size-h2-desktop: 2.2em;
+$font-size-nosotros-desktop: 2.5em;
+$font-size-calle-desktop: 1.2em;
+$font-size-menu-desktop: 1.2em;
+$font-size-producto-nombre: 1.3em;
+$font-size-precio: 1.2em;
+$font-size-categoria-h1-desktop: 3em;
+$font-size-contacto-h2: 1.4rem;
+
+// --- Espaciados / Padding / Margins ---
+$margin-vertical-secciones: 40px;
+$padding-producto: 15px;
+$gap-productos: 30px;
+$padding-bottom-productos: 60px;
+$margin-top-h2: 20px;
+$margin-bottom-h2: 35px;
+$margin-top-nosotros: 50px;
+$margin-bottom-calle: 50px;
+$margin-vertical-menu: 40px;
+$padding-vertical-menu: 15px;
+$margin-horizontal-menu: 25px;
+$margin-bottom-producto-img: 15px;
+$margin-bottom-producto-nombre: 8px;
+$padding-pagina-categoria: 30px 15px 60px;
+$margin-top-footer: 40px;
+$padding-contacto: 30px;
+$margin-contacto: 40px auto;
+$margin-top-logo-h1: 30px;
+$margin-bottom-logo-h1: 20px;
+
+// --- Tamaños de elementos ---
+$width-producto: 320px;
+$height-producto-img: 250px;
+$max-width-contacto: 600px;
+$max-height-card-personal: 200px;
+
+// --- Bordes y Sombras ---
+$border-radius-general: 8px;
+$border-radius-producto: 12px;
+$border-radius-imagen: 10px;
+$border-producto: 2px solid $color-gris-claro-borde;
+$box-shadow-producto: 0 4px 10px rgba(0, 0, 0, 0.3);
+$box-shadow-producto-hover: 0 8px 18px rgba(0, 0, 0, 0.5);
+$box-shadow-card-personal: 0 4px 8px rgba(0,0,0,0.2);
+$box-shadow-contacto: 0 4px 12px rgba(0,0,0,0.3);
+
+// --- Transiciones ---
+$transition-color: color 0.3s ease;
+$transition-transform: transform 0.2s ease;
+$transition-producto-hover: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+$transition-personal-img: transform 0.4s ease;
+$transition-personal-overlay: opacity 0.3s ease;
+
+// --- Media Queries Breakpoints ---
+$breakpoint-mobile: 767px;

@@ -1,0 +1,42 @@
+// scss/base/_typography.scss
+
+// Importar fuentes de Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.com/css2?family=Oswald:wght@700&family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+
+// Estilos generales para h2
+h2 {
+    color: $color-blanco-ahumado; // Usamos variable
+    text-align: center;
+    margin-top: $margin-top-h2; // Usamos variable
+    margin-bottom: $margin-bottom-h2; // Usamos variable
+    font-size: $font-size-h2-desktop; // Usamos variable
+    font-family: $fuente-titulos; // Usamos variable
+    text-transform: uppercase;
+}
+
+// Estilos generales para p
+p {
+    color: $color-blanco-ahumado; // Usamos variable
+    margin: 10px 0; // Podríamos hacer estas variables también: $margin-p-vertical: 10px; $margin-p-horizontal: 0;
+    font-size: $font-size-base; // Usamos variable
+}
+
+// Clases específicas de textos
+.nosotros {
+    text-align: center;
+    color: $color-morado; // Usamos variable
+    margin-top: $margin-top-nosotros; // Usamos variable
+    font-size: $font-size-nosotros-desktop; // Usamos variable
+    font-family: $fuente-titulos; // Usamos variable
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.calle {
+    text-align: center;
+    margin-bottom: $margin-bottom-calle; // Usamos variable
+    font-size: $font-size-calle-desktop; // Usamos variable
+    color: $color-blanco-ahumado; // Usamos variable
+}

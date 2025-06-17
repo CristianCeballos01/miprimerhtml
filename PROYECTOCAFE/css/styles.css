@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.com/css2?family=Oswald:wght@700&family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Roboto Mono", monospace;
+  color: #F8F5EC;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+main {
+  grid-row: 2;
+}
+
+h2 {
+  color: #F8F5EC;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  font-size: 2.2em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  color: #F8F5EC;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.nosotros {
+  text-align: center;
+  color: #5609bb;
+  margin-top: 50px;
+  font-size: 2.5em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calle {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.2em;
+  color: #F8F5EC;
+}
+
+.menu {
+  text-align: center;
+  margin: 40px 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px 0;
+  border-radius: 8px;
+}
+.menu a {
+  display: inline-block;
+  margin: 0 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #F8F5EC;
+  font-size: 1.2em;
+  transition: color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.menu a:hover {
+  color: #CD5C5C;
+  transform: translateY(-2px);
+}
+
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.producto, .contenedor-imagen {
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  border: 2px solid #555;
+  width: 320px;
+  text-align: center;
+  padding: 15px;
+  color: #F8F5EC;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.producto:hover, .contenedor-imagen:hover {
+  transform: scale(1.04);
+  border-color: #CD5C5C;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.producto img, .contenedor-imagen img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+}
+
+.producto-nombre,
+.contenedor-imagen p:not(.precio) {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #E2B48C;
+  text-transform: uppercase;
+}
+
+.precio {
+  font-size: 1.2em;
+  color: #5CB85C;
+  font-weight: bold;
+  margin: 5px 0 0;
+  letter-spacing: 0.5px;
+}
+
+.pagina-categoria {
+  background-color: rgb(25, 25, 25);
+  padding: 30px 15px 60px;
+  min-height: 100vh;
+  flex-grow: 1;
+}
+
+.pagina-categoria h1 {
+  color: #CD5C5C;
+  margin-bottom: 15px;
+  font-size: 3em;
+}
+
+.personal {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #535151;
+}
+.personal h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.personal .galeria-personal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.personal .card-personal {
+  flex: 1 1 calc(25% - 15px);
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  animation: fadeUp 0.8s ease-in-out both;
+}
+.personal .card-personal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.personal .card-personal:hover img {
+  transform: scale(1.1);
+}
+.personal .card-personal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px;
+}
+.personal .card-personal .overlay h3 {
+  font-size: 1.4rem;
+  margin: 5px 0;
+}
+.personal .card-personal .overlay p {
+  font-size: 1rem;
+  font-style: italic;
+}
+.personal .card-personal:hover .overlay {
+  opacity: 1;
+}
+
+.header .logo-container {
+  text-align: center;
+}
+.header .logo-container h1 {
+  font-size: 2.8em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #E2B48C;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  animation: aparecer 1s ease-in-out;
+}
+
+.footer {
+  background-color: #3e2723;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.contacto {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.contacto h2 {
+  color: #E2B48C;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+}
+.contacto a {
+  color: #F8F5EC;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .menu a {
+    display: block;
+    margin: 10px auto;
+    font-size: 1.3em;
+  }
+  .producto, .contenedor-imagen {
+    width: 90%;
+  }
+  .card-personal {
+    flex-basis: calc(50% - 10px);
+  }
+  .personal h2 {
+    font-size: 1.8rem;
+  }
+  .pagina-bebidas,
+  .pagina-comidas,
+  .pagina-extras,
+  .pagina-helados,
+  .pagina-cositasparallevar {
+    padding: 20px 10px 40px;
+  }
+  .pagina-bebidas h1,
+  .pagina-comidas h1,
+  .pagina-extras h1,
+  .pagina-helados h1,
+  .pagina-cositasparallevar h1 {
+    font-size: 2.2em;
+  }
+  .logo-container h1 {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font-size: 1.9em;
+  }
+  .nosotros {
+    font-size: 2em;
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

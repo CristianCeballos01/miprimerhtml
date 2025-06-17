@@ -1,0 +1,76 @@
+// scss/components/_personal.scss
+
+.personal {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: $color-fondo-personal; // Usamos variable
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .galeria-personal {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card-personal {
+        flex: 1 1 calc(25% - 15px); // Responsive para 4 columnas, restando el gap
+        max-height: $max-height-card-personal; // Usamos variable
+        overflow: hidden;
+        border-radius: $border-radius-imagen; // Reutilizamos variable de border-radius para imágenes
+        position: relative;
+        box-shadow: $box-shadow-card-personal; // Usamos variable
+        cursor: pointer;
+        animation: fadeUp 0.8s ease-in-out both; // La animación la moveremos a un archivo aparte
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: $transition-personal-img; // Usamos variable
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-family: $fuente-personal-overlay; // Usamos variable
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: $transition-personal-overlay; // Usamos variable
+            text-align: center;
+            padding: 10px;
+
+            h3 {
+                font-size: 1.4rem;
+                margin: 5px 0;
+            }
+
+            p {
+                font-size: 1rem;
+                font-style: italic;
+            }
+        }
+
+        &:hover .overlay {
+            opacity: 1;
+        }
+    }
+}

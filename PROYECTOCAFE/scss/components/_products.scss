@@ -1,0 +1,68 @@
+// scss/components/_products.scss
+
+// Contenedor Principal para Productos con Flexbox
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $gap-productos; // Usamos variable
+    padding-bottom: $padding-bottom-productos; // Usamos variable
+}
+
+// Cada producto individual
+.producto, .contenedor-imagen {
+    background-color: $color-gris-oscuro-transparente; // Usamos variable
+    border-radius: $border-radius-producto; // Usamos variable
+    border: $border-producto; // Usamos variable
+    width: $width-producto; // Usamos variable
+    text-align: center;
+    padding: $padding-producto; // Usamos variable
+    color: $color-blanco-ahumado; // Usamos variable
+    @include tarjeta-hover; // Usamos el mixin que ya definimos
+}
+
+// Imagen dentro de productos
+
+.producto img, .contenedor-imagen img {
+    width: 100%;
+    height: $height-producto-img;
+    object-fit: cover;
+    border-radius: $border-radius-imagen;
+    margin-bottom: $margin-bottom-producto-img;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+}
+
+// Nombre del producto
+.producto-nombre,
+.contenedor-imagen p:not(.precio) {
+    font-size: $font-size-producto-nombre; // Usamos variable
+    font-weight: 700;
+    margin-bottom: $margin-bottom-producto-nombre; // Usamos variable
+    color: $color-caramelo; // Usamos variable
+    text-transform: uppercase;
+}
+
+// Precio
+.precio {
+    font-size: $font-size-precio; // Usamos variable
+    color: $color-verde-oscuro; // Usamos variable
+    font-weight: bold;
+    margin: 5px 0 0;
+    letter-spacing: 0.5px;
+}
+
+// Estilos comunes para todas las páginas de categorías
+.pagina-categoria {
+    background-color: rgb(25, 25, 25);
+    padding: $padding-pagina-categoria; // Usamos variable
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+// Títulos comunes en páginas de categorías
+.pagina-categoria h1 {
+    color: $color-rojo-oxido; // Usamos variable
+    margin-bottom: 15px;
+    font-size: $font-size-categoria-h1-desktop; // Usamos variable
+}

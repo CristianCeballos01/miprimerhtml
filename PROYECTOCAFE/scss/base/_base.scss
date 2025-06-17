@@ -1,0 +1,20 @@
+// scss/base/_base.scss
+
+// Estilos base del body
+body {
+    background-color: $color-negro; // Usamos variable
+    font-family: $fuente-principal; // Usamos variable
+    color: $color-blanco-ahumado; // Usamos variable
+    line-height: 1.6;
+    min-height: 100vh;
+
+    // Configuración de Grid para el layout principal
+    display: grid;
+    grid-template-rows: auto 1fr auto; // header, main (contenido que crece), footer
+    grid-template-columns: 100%; // 1 columna para todo el ancho
+}
+
+// Estilos para el elemento main
+main {
+    grid-row: 2;
+}

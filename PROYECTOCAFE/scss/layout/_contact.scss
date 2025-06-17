@@ -1,0 +1,24 @@
+// scss/layout/_contact.scss
+
+.contacto {
+    background-color: $color-fondo-contacto-suave; // Usamos variable
+    padding: $padding-contacto; // Usamos variable
+    margin: $margin-contacto; // Usamos variable
+    max-width: $max-width-contacto; // Usamos variable
+    border-radius: $border-radius-producto; // Reutilizamos variable
+    text-align: center;
+    box-shadow: $box-shadow-contacto; // Usamos variable
+
+    h2 {
+        color: $color-caramelo; // Usamos variable
+        margin-bottom: 15px; // Podría ser variable
+        text-transform: uppercase;
+        font-family: $fuente-titulos; // Usamos variable
+        letter-spacing: 1px;
+    }
+
+    a {
+        color: $color-blanco-ahumado; // Usamos variable
+        text-decoration: underline;
+    }
+}
